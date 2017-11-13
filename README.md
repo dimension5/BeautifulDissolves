@@ -40,4 +40,4 @@ These instructions will get you started on using Beautiful Dissolves in your own
 | Glow Intensity **(0-1)** | The intensity of the dissolve glow |
 | Follow-Through **(boolean)** | If a Substitute texture is used, this will determine whether the substitute will also glow or not |
 
-***\* These features are only available in Unity 2017.1.0 and higher.***
+***(\*) These features are only available in Unity 2017.1.0 and higher.***
