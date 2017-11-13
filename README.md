@@ -23,7 +23,7 @@ These instructions will get you started on using Beautiful Dissolves in your own
 
 ## Dissolve Settings
 | Setting        | Description  |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | Dissolve Map     | The dissolve pattern, uses the red (R) channel of the texture map (lower/darker values dissolve faster) |
 | Direction Map      | The direction of dissolve controlled by the red (R) channel of the texture map (lower/darker values dissolve faster)     |
 | Dissolve Mask | The dissolve mask, uses the alpha (A) channel of the texture map (0 = no dissolve, 1 = dissolve)      |
