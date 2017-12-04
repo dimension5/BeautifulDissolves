@@ -42,8 +42,22 @@ These instructions will get you started on using Beautiful Dissolves in your own
 
 ***(\*) These features are only available in Unity 2017.1.0 and higher.***
 
+## Dissolve Settings (only available in v2.0.0 (Unity 2017.1.0 or higher)
+A scriptable object that allows you to reuse dissolve settings for multiple gameobjects. Create a new ```DissolveSetting``` by using the menu option ```Create > BeautifulDissolves > Settings```.
+
+#### Settings
+| Setting        |  Description  |
+| ------------- | -------------|
+| Atomic | Controls whether the dissolve can be interrupted or not |
+| Disable After Dissolve | Controls whether this object can be dissolved more than once |
+| Dissolve Curve | An animation curve for the dissolve amount |
+| Dissolve Start Percent | Percentage at which object should start dissolving from |
+| Time | Amount of time the dissolve animation will take assuming speed is 1 |
+| Speed | Allows you to "fast-forward" the animation. Similar to the ```Time``` parameter |
+
 ## Dissolve Helper Scripts
 ### Dissolve.cs
+Add this script to any object with a Dissolve material to easily trigger dissolve by script.
 ```csharp
 // Triggers dissolve using the DissolveSettings in the inspector
 public void TriggerDissolve()
@@ -57,9 +71,25 @@ public void TriggerDissolve(bool atomic, bool disableAfterDissolve, AnimationCur
 // Triggers a reverse dissolve using the DissolveSettings in the inspector
 public void TriggerReverseDissolve()
 ```
+#### Settings
+| Setting        |  Description  |
+| ------------- | -------------|
+| Dissolve Settings | The dissolve settings to use for this dissolve (see above) |
+| On Dissolve Start | The events that should trigger on dissolve start |
+| On Dissolve End | The events that should trigger on dissolve end |
+
+### DissolveGlowUpdate.cs
+Add this script to any object with a Dissolve material to add a light source that will respond to the DissolveGlow property of the material. If ```Glow Source``` is set to ```Light``` then the script's inspector will allow you to create a Light source with a single-click that will update itself based on the current DissolveGlow properties (color, intensity).
+
+#### Settings
+| Setting        | Options | Description  |
+| ------------- |------------- |-------------|
+| Start Mode   | (\*)On Awake, On Start, By Script | When the glow will start updating |
+| Update Rage | (\*)Every Frame, Every Nth Frame, Custom Fixed Timestep | The rate at which the glow will update |
+| Glow Source | (\*)Emissive, Light | The source of glow, ```Emissive``` source requres the object to be set to ```Static```. If ```Light``` is selected then an option to auto-create a ```Light``` source is made available |
+| Glow Cutoff | float (0-1) | The dissolve amount at which glow should be 0, this allows you to adjust for when the object is fully dissolved before it reaches a dissolve amount of 1 |
+
+***(\*) Marks options that are by default***
 
 ### DissolveHelper.cs
 This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture)``` allows you to change the dissolve map in runtime.
-
-### DissolveGlowUpdate.cs
-Add this script to any object with a Dissolve material to easily add a Light that will respond to the DissolveGlow property of the material. The script's inspector allows you to create a Light source with a single-click that will update itself based on the current DissolveGlow properties (color, intensity).
