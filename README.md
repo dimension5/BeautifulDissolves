@@ -93,3 +93,12 @@ Add this script to any object with a Dissolve material to add a light source tha
 
 ### DissolveHelper.cs
 This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture)``` allows you to change the dissolve map in runtime.
+
+#### Example
+```csharp
+// In your own script
+public void ChangeDissolveMap()
+{
+  DissolveHelper.SetDissolveMap(myDissolveMaterial, myDissolveMap);
+}
+```
