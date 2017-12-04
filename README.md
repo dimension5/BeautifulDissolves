@@ -21,7 +21,7 @@ These instructions will get you started on using Beautiful Dissolves in your own
 * Over 60 Dissolve Maps Included
 * ...and more!
 
-## Dissolve Settings
+## Dissolve Material Settings
 | Setting        | Description  |
 | ------------- |-------------|
 | Dissolve Map **(R)**    | The dissolve pattern, uses the red (R) channel of the texture map (lower/darker values dissolve faster) |
@@ -42,7 +42,9 @@ These instructions will get you started on using Beautiful Dissolves in your own
 
 ***(\*) These features are only available in Unity 2017.1.0 and higher.***
 
-## Dissolve Settings (only available in v2.0.0 (Unity 2017.1.0 or higher)
+## Dissolve Helper Scripts
+
+### Dissolve Settings Object (only available in v2.0.0 (Unity 2017.1.0 or higher))
 A scriptable object that allows you to reuse dissolve settings for multiple gameobjects. Create a new ```DissolveSetting``` by using the menu option ```Create > BeautifulDissolves > Settings```.
 
 #### Settings
@@ -55,7 +57,6 @@ A scriptable object that allows you to reuse dissolve settings for multiple game
 | Time | Amount of time the dissolve animation will take assuming speed is 1 |
 | Speed | Allows you to "fast-forward" the animation. Similar to the ```Time``` parameter |
 
-## Dissolve Helper Scripts
 ### Dissolve.cs
 Add this script to any object with a Dissolve material to easily trigger dissolve by script.
 ```csharp
