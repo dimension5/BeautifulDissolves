@@ -82,7 +82,7 @@ public void TriggerReverseDissolve()
 ### DissolveGlowUpdate.cs
 Add this script to any object with a Dissolve material to add a light source that will respond to the DissolveGlow property of the material. If ```Glow Source``` is set to ```Light``` then the script's inspector will allow you to create a Light source with a single-click that will update itself based on the current DissolveGlow properties (color, intensity).
 
-![](/DissolveGlow.gif)
+![](./DissolveGlow.gif)
 
 #### Settings
 | Setting        | Options | Description  |
