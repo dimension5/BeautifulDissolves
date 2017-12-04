@@ -41,3 +41,22 @@ These instructions will get you started on using Beautiful Dissolves in your own
 | Follow-Through **(boolean)** | If a Substitute texture is used, this will determine whether the substitute will also glow or not |
 
 ***(\*) These features are only available in Unity 2017.1.0 and higher.***
+
+## Dissolve Helper Scripts
+### Dissolve.cs
+```csharp
+// Triggers dissolve using the DissolveSettings in the inspector
+public void TriggerDissolve()
+// Triggers dissolve using custom DissolveSettings object
+public void TriggerDissolve(DissolveSettings settings)
+// Triggers dissolve with custom parameters
+public void TriggerDissolve(bool atomic, bool disableAfterDissolve, AnimationCurve dissolveCurve, float dissolveStartPercent, float time, float speed)
+// Triggers a reverse dissolve using the DissolveSettings in the inspector
+public void TriggerReverseDissolve()
+```
+
+### DissolveHelper.cs
+This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture``` allows you to change the dissolve map in runtime.
+
+### DissolveGlowUpdate.cs
+Add this script to any object with a Dissolve material to easily add a Light that will respond to the DissolveGlow property of the material.
