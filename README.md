@@ -90,7 +90,7 @@ Add this script to any object with a Dissolve material to add a light source tha
 | Glow Source | (\*)Emissive, Light | The source of glow, ```Emissive``` source requres the object to be set to ```Static```. If ```Light``` is selected then an option to auto-create a ```Light``` source is made available |
 | Glow Cutoff | float (0-1) | The dissolve amount at which glow should be 0, this allows you to adjust for when the object is fully dissolved before it reaches a dissolve amount of 1 |
 
-***(\*) Marks options that are by default***
+***(\*) Indicates default options***
 
 ### DissolveHelper.cs
 This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture)``` allows you to change the dissolve map in runtime.
