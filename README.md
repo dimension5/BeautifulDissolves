@@ -47,16 +47,19 @@ These instructions will get you started on using Beautiful Dissolves in your own
 ```csharp
 // Triggers dissolve using the DissolveSettings in the inspector
 public void TriggerDissolve()
+
 // Triggers dissolve using custom DissolveSettings object
 public void TriggerDissolve(DissolveSettings settings)
+
 // Triggers dissolve with custom parameters
 public void TriggerDissolve(bool atomic, bool disableAfterDissolve, AnimationCurve dissolveCurve, float dissolveStartPercent, float time, float speed)
+
 // Triggers a reverse dissolve using the DissolveSettings in the inspector
 public void TriggerReverseDissolve()
 ```
 
 ### DissolveHelper.cs
-This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture``` allows you to change the dissolve map in runtime.
+This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture)``` allows you to change the dissolve map in runtime.
 
 ### DissolveGlowUpdate.cs
-Add this script to any object with a Dissolve material to easily add a Light that will respond to the DissolveGlow property of the material.
+Add this script to any object with a Dissolve material to easily add a Light that will respond to the DissolveGlow property of the material. The script's inspector allows you to create a Light source with a single-click that will update itself based on the current DissolveGlow properties (color, intensity).
