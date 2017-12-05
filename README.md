@@ -82,7 +82,7 @@ public void TriggerReverseDissolve()
 ### DissolveGlowUpdate.cs
 Add this script to any object with a Dissolve material to add a light source that will respond to the DissolveGlow property of the material. If ```Glow Source``` is set to ```Light``` then the script's inspector will allow you to create a Light source with a single-click that will update itself based on the current DissolveGlow properties (color, intensity).
 
-![](https://github.com/dimension5/BeautifulDissolves/blob/master/images/DissolveGlow.gif)
+![Dissolve glow script in action](https://github.com/dimension5/BeautifulDissolves/blob/master/images/DissolveGlow.gif)
 
 #### Settings
 | Setting        | Options | Description  |
@@ -95,7 +95,7 @@ Add this script to any object with a Dissolve material to add a light source tha
 ***(\*) Indicates default options***
 
 ### DissolveHelper.cs
-This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture)``` allows you to change the dissolve map in runtime.
+This script allows you to easily change the dissolve shader properties during runtime. All dissolve properties are exposed through getters/setters, eg. ```SetDissolveMap(Material mat, Texture2D texture)``` allows you to change the dissolve map during runtime.
 
 #### Example
 ```csharp
