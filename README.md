@@ -88,7 +88,7 @@ Add this script to any object with a Dissolve material to add a light source tha
 | Setting        | Options | Description  |
 | ------------- |------------- |-------------|
 | Start Mode   | (\*)On Awake, On Start, By Script | When the glow will start updating |
-| Update Rage | (\*)Every Frame, Every Nth Frame, Custom Fixed Timestep | The rate at which the glow will update |
+| Update Rate | (\*)Every Frame, Every Nth Frame, Custom Fixed Timestep | The rate at which the glow will update |
 | Glow Source | (\*)Emissive, Light | The source of glow, ```Emissive``` source requres the object to be set to ```Static```. If ```Light``` is selected then an option to auto-create a ```Light``` source is made available |
 | Glow Cutoff | float (0-1) | The dissolve amount at which glow should be 0, this allows you to adjust for when the object is fully dissolved before it reaches a dissolve amount of 1 |
 
